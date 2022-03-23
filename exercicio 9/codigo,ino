@@ -1,0 +1,88 @@
+const int led1 = 13;
+const int led2 = 12;
+const int led3 = 11;
+const int led4 = 10;
+const int led5 = 9;
+const int led6 = 2;
+const int led7 = 1;
+const int led8 = 7;
+const int led9 = 6;
+const int led10 = 3;
+const int pot = 0;
+
+int var = 0;
+
+ void setup()
+{
+ pinMode(led1, OUTPUT);
+ pinMode(led2, OUTPUT);
+ pinMode(led3, OUTPUT);
+ pinMode(led4, OUTPUT);
+ pinMode(led5, OUTPUT);
+ pinMode(led6, OUTPUT);
+ pinMode(led7, OUTPUT);
+ pinMode(led8, OUTPUT);
+ pinMode(led9, OUTPUT);
+ pinMode(led10, OUTPUT);
+  
+ Serial.begin(9600);
+}
+
+void loop()
+{
+  var = analogRead(pot);
+  Serial.println(var);
+  
+  if (var > 10){
+  digitalWrite(led1, HIGH);
+  }else{
+  digitalWrite(led1, LOW);
+    
+  if (var > 30){
+  digitalWrite(led2, HIGH);
+  }else{
+  digitalWrite(led2, LOW);
+     
+  if (var > 50){
+  digitalWrite(led3, HIGH);
+  }else{
+  digitalWrite(led3, LOW);
+       
+  if (var > 80){
+  digitalWrite(led4, HIGH);
+  }else{
+  digitalWrite(led4, LOW);
+         
+  if (var > 110){
+  digitalWrite(led5, HIGH);
+  }else{
+  digitalWrite(led5, LOW);
+    
+  if (var > 140){
+  digitalWrite(led6, HIGH);
+  }else{
+  digitalWrite(led6, LOW);
+      
+  if (var > 170){
+  digitalWrite(led7, HIGH);
+  }else{
+  digitalWrite(led7, LOW);
+        
+  if (var > 200){
+  digitalWrite(led8, HIGH);
+  }else{
+  digitalWrite(led8, LOW);
+          
+  if (var > 230){
+  digitalWrite(led9, HIGH);
+  }else{
+  digitalWrite(led9, LOW);
+            
+  if (var > 260){
+  digitalWrite(led10, HIGH);
+  }else{
+  digitalWrite(led10, LOW);
+  }
+  delay(200);
+  } 
+}
